@@ -29,6 +29,21 @@ Local SMB lead engine for Ann Arbor, MI: scrape Maps/Places → SQLite → optio
 | Operate | `dashboard.py` | Streamlit control plane |
 | Score | `ml/train_lead_scorer.py` | Train/evaluate priority models |
 
+Systems tradeoffs, failure modes, and what the proxy ML does **not** prove: **[docs/SYSTEMS.md](docs/SYSTEMS.md)**.
+
+### Synthetic pipeline bench (`ml/bench_pipeline.py`)
+
+Local timing on *n*=5000 synthetic Maps-like feature rows (no network, no PII DB):
+
+| Metric | Value |
+|--------|------:|
+| Feature build | 0.0018 s |
+| Score | 0.0052 s |
+| Total | 0.0070 s |
+| Throughput | ~712k rows/s |
+
+Reproduce: `python3 ml/bench_pipeline.py --n 5000` → `ml/artifacts/bench_pipeline.json`.
+
 ---
 
 ## Lead-priority ML (proxy-labeled)

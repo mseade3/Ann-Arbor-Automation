@@ -1,0 +1,8 @@
+{
+  "n": 5000,
+  "feature_build_sec": 0.0018,
+  "score_sec": 0.0052,
+  "total_sec": 0.007,
+  "rows_per_sec": 712068,
+  "note": "Synthetic features only \u2014 not live scrape latency"
+}
