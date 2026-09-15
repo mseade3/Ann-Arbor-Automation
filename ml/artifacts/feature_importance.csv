@@ -1,0 +1,14 @@
+feature,importance
+website_missing,0.2869618183834103
+log_review_count,0.20970309070209447
+niche_service_score,0.1863288211120506
+rating,0.17639492989777913
+has_phone,0.10052939258930778
+niche_is_beauty,0.008849216064061877
+niche_is_auto,0.007687619997926106
+has_description,0.007356795674289447
+niche_is_home,0.007219107014102691
+niche_is_food,0.004667684705780139
+niche_is_health,0.0043015238591974534
+name_token_count,0.0
+address_completeness,0.0

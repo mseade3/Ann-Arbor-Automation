@@ -1,0 +1,78 @@
+{
+  "label_type": "proxy",
+  "proxy_version": "v1-sales-heuristic-2026-09",
+  "n_samples": 2500,
+  "n_train": 2000,
+  "n_test": 500,
+  "positive_rate_train": 0.5605,
+  "positive_rate_test": 0.56,
+  "features": [
+    "rating",
+    "log_review_count",
+    "website_missing",
+    "has_phone",
+    "has_description",
+    "name_token_count",
+    "address_completeness",
+    "niche_service_score",
+    "niche_is_auto",
+    "niche_is_beauty",
+    "niche_is_food",
+    "niche_is_home",
+    "niche_is_health"
+  ],
+  "models": {
+    "logistic_regression": {
+      "accuracy": 0.84,
+      "precision": 0.8448275862068966,
+      "recall": 0.875,
+      "f1": 0.8596491228070176,
+      "confusion_matrix": {
+        "labels": [
+          "skip(0)",
+          "outreach(1)"
+        ],
+        "matrix": [
+          [
+            175,
+            45
+          ],
+          [
+            35,
+            245
+          ]
+        ]
+      },
+      "classification_report": "              precision    recall  f1-score   support\n\n        skip       0.83      0.80      0.81       220\n    outreach       0.84      0.88      0.86       280\n\n    accuracy                           0.84       500\n   macro avg       0.84      0.84      0.84       500\nweighted avg       0.84      0.84      0.84       500\n"
+    },
+    "random_forest": {
+      "accuracy": 0.924,
+      "precision": 0.9172413793103448,
+      "recall": 0.95,
+      "f1": 0.9333333333333333,
+      "confusion_matrix": {
+        "labels": [
+          "skip(0)",
+          "outreach(1)"
+        ],
+        "matrix": [
+          [
+            196,
+            24
+          ],
+          [
+            14,
+            266
+          ]
+        ]
+      },
+      "classification_report": "              precision    recall  f1-score   support\n\n        skip       0.93      0.89      0.91       220\n    outreach       0.92      0.95      0.93       280\n\n    accuracy                           0.92       500\n   macro avg       0.93      0.92      0.92       500\nweighted avg       0.92      0.92      0.92       500\n"
+    }
+  },
+  "live_db": {
+    "path": "data/aade.db",
+    "n_leads_scored": 57,
+    "mean_rf_proba": 0.22224983049480382,
+    "proxy_positive_rate": 0.10526315789473684
+  }
+}

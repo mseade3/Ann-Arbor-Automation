@@ -1,0 +1,65 @@
+# Secrets & local env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+service-account*.json
+
+# Local SQLite (may contain PII / outreach copy)
+data/*.db
+data/*.db-*
+*.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtualenvs
+.venv/
+.venv-*/
+venv/
+env/
+
+# IDE / OS
+.idea/
+.vscode/
+.cursor/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Generated project outputs (HTML mockups, screenshots — large / client-specific)
+projects/
+output/
+design_review/
+*.png
+*.jpg
+*.jpeg
+*.webp
+!ml/artifacts/*.png
+!docs/assets/*.png
+
+# ML caches (keep committed metrics artifacts)
+ml/artifacts/*.joblib
+ml/artifacts/model_*.pkl
+ml/artifacts/live_leads_scored_anonymized.csv
+!ml/artifacts/metrics.json
+!ml/artifacts/feature_importance.csv
+!ml/artifacts/confusion_*.png
+
+# Logs / temp
+*.log
+tmp/
+temp/
+.cache/
